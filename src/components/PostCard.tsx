@@ -113,6 +113,7 @@ const PostCardLarge = css`
       flex: 1 1 auto;
       margin-bottom: 0;
       min-height: 380px;
+      margin-left: 2rem;
     }
 
     .post-card-image {

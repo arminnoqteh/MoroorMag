@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Global, css } from '@emotion/react';
 import { lighten } from 'polished';
+import '../styles/typography.css';
 
 // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error
 // @ts-ignore
@@ -97,12 +98,14 @@ const IndexLayout: React.FC<IndexProps> = props => {
           mark,
           audio,
           video {
+            direction: rtl;
             margin: 0;
             padding: 0;
             border: 0;
             font: inherit;
             font-size: 100%;
             vertical-align: baseline;
+            font-family: 'Vazir', sans-serif;
           }
           body {
             line-height: 1;
