@@ -5,7 +5,15 @@
   facebook: ghost
   website: https://ghost.org/
   location: San Francisco
-- id: Another Author
+- id: حسین
+  avatar: avatars/ghost.png
+  bio: This is another test author with a profile background image
+  twitter: TryGhost
+  facebook: ghost
+  website: https://ghost.org/
+  location: San Francisco
+  profile_image: img/alex-knight-326705-unsplash.jpg
+- id: سبحان
   avatar: avatars/ghost.png
   bio: This is another test author with a profile background image
   twitter: TryGhost

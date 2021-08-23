@@ -6,6 +6,7 @@ tags: ['Drama']
 image: img/nomadland-poster.jpg
 date: '2021-08-23'
 draft: false
+excerpt: اول از هر چیز ، بریم سراغ اسکار ۲۰۲۰ .
 ---
 
 🏆 3 Oscars
