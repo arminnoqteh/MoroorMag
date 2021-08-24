@@ -108,7 +108,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
             </SiteNavContent>
           </SiteNavLeft>
           <SiteNavRight>
-            <SocialLinks>
+            {/* <SocialLinks>
               {config.facebook && (
                 <a
                   className="social-link-fb"
@@ -132,7 +132,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   <Twitter />
                 </a>
               )}
-            </SocialLinks>
+            </SocialLinks> */}
             {config.showSubscribe && (
               <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
             )}
@@ -294,6 +294,7 @@ const NavPostTitle = styled.span`
   opacity: 0;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateY(175%);
+  margin-right: 1rem;
 
   .dash {
     left: -25px;

@@ -29,13 +29,15 @@ export interface ReadNextProps {
 
 export const ReadNextCard: React.FC<ReadNextProps> = props => {
   // filter out current post and limit to 3 related posts
-  const relatedPosts = props.relatedPosts.edges.filter(post => post.node.fields.slug !== props.currentPageSlug).slice(0, 3);
+  const relatedPosts = props.relatedPosts.edges
+    .filter(post => post.node.fields.slug !== props.currentPageSlug)
+    .slice(0, 3);
 
   return (
     <ReadNextCardArticle className="read-next-card">
       <header className="read-next-card-header">
         <ReadNextCardHeaderTitle>
-          <span>More in</span>{' '}
+          <span>بیشتر درباره‌ی</span>{' '}
           <Link to={`/tags/${_.kebabCase(props.tags[0])}/`}>{props.tags[0]}</Link>
         </ReadNextCardHeaderTitle>
       </header>
@@ -54,8 +56,7 @@ export const ReadNextCard: React.FC<ReadNextProps> = props => {
                 </h4>
                 <ReadNextCardMeta className="read-next-card-meta">
                   <p>
-                    <time dateTime={datetime}>{displayDatetime}</time> - {n.node.timeToRead} min
-                    read
+                    <time dateTime={datetime}>{displayDatetime}</time> - {n.node.timeToRead} دقیقه
                   </p>
                 </ReadNextCardMeta>
               </li>
@@ -65,9 +66,9 @@ export const ReadNextCard: React.FC<ReadNextProps> = props => {
       </ReadNextCardContent>
       <ReadNextCardFooter className="read-next-card-footer">
         <Link to={`/tags/${_.kebabCase(props.tags[0])}/`}>
-          {props.relatedPosts.totalCount > 1 && `See all ${props.relatedPosts.totalCount} posts`}
-          {props.relatedPosts.totalCount === 1 && '1 post'}
-          {props.relatedPosts.totalCount === 0 && 'No posts'} →
+          {props.relatedPosts.totalCount > 1 && 'دیدن همه'}
+          {props.relatedPosts.totalCount === 1 && '۱ پست'}
+          {props.relatedPosts.totalCount === 0 && 'هیج پستی در این موضوع وجود ندارد.'}
         </Link>
       </ReadNextCardFooter>
     </ReadNextCardArticle>

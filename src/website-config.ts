@@ -52,7 +52,7 @@ const config: WebsiteConfig = {
   title: 'مرورمگ',
   description: 'بررسی و مرور محتوای سرگرمی',
   coverImage: 'img/blog-cover.png',
-  logo: 'img/MoroorMag-icon-web.png',
+  logo: 'img/moroormag-icon-web.png',
   lang: 'fa',
   siteUrl: 'https://gatsby-casper.netlify.com',
   facebook: 'https://www.facebook.com/ghost',

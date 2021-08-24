@@ -40,9 +40,9 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
           <div css={[inner]}>
             <section style={{ textAlign: 'center' }}>
               <ErrorCode>404</ErrorCode>
-              <ErrorDescription>Page not found</ErrorDescription>
-              <Link css={ErrorLink} to="">
-                Go to the front page →
+              <ErrorDescription>اصلا همچین صفحه‌ای نداریم!</ErrorDescription>
+              <Link css={ErrorLink} to="/">
+                بریم صفحه اصلی؟
               </Link>
             </section>
 

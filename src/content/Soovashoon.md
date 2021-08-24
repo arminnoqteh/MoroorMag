@@ -2,7 +2,7 @@
 layout: post
 title: 'مرور سووشون'
 author: [سبحان]
-tags: ['Drama']
+tags: ['درام']
 image: img/soovashoon-cover.jpg
 date: '2021-08-23'
 draft: false

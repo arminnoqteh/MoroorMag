@@ -74,8 +74,8 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
               })}
             </span>
             <span className="post-card-byline-date">
-              <time dateTime={datetime}>{displayDatetime}</time>{' '}
-              <span className="bull">&bull;</span> {post.fields.readingTime.text}
+              {post.fields.readingTime.text} <span className="bull">&bull;</span>
+              <time dateTime={datetime}>{displayDatetime}</time>
             </span>
           </PostCardBylineContent>
         </PostCardMeta>

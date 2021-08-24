@@ -12,15 +12,8 @@ export const Footer: React.FC = () => {
   return (
     <footer css={[outer, SiteFooter]}>
       <div css={[inner, SiteFooterContent]}>
-        <section className="copyright">
-          <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}{' '}
-          {config.footer && (
-            <Link to="/">
-              | {config.title} {config.footer}
-            </Link>
-          )}
-        </section>
-        <SiteFooterNav>
+        <section className="copyright">میزبانی با Netlify | {config.footer}</section>
+        {/* <SiteFooterNav>
           <Link to="/">Latest Posts</Link>
           {config.facebook && (
             <a href={config.facebook} target="_blank" rel="noopener noreferrer">
@@ -38,7 +31,7 @@ export const Footer: React.FC = () => {
           </a>
 
           <a href="/rss.xml">RSS</a>
-        </SiteFooterNav>
+        </SiteFooterNav> */}
       </div>
     </footer>
   );
@@ -100,4 +93,3 @@ const SiteFooterNav = styled.nav`
     }
   }
 `;
-

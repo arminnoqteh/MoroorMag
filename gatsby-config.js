@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-casper.netlify.com',
+        siteUrl: 'https://moroormag.netlify.com',
       },
     },
     'gatsby-plugin-typescript',
@@ -112,7 +112,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Ghost's Blog",
+            title: 'مرورمگ',
             match: '^/blog/',
           },
         ],

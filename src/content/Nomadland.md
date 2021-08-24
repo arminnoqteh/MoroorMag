@@ -2,7 +2,7 @@
 layout: post
 title: 'مرور Nomadland'
 author: [ماهان]
-tags: ['Drama']
+tags: ['درام']
 image: img/nomadland-poster.jpg
 date: '2021-08-23'
 draft: false
