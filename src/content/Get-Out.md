@@ -3,7 +3,7 @@ layout: post
 title: 'مرور Get Out'
 author: [مهیار]
 tags: ['درام']
-image: img/get-out-poster.jpeg
+image: img/Get-out-poster.jpg
 date: '2021-08-24'
 draft: false
 excerpt: کریس یک جوان افریقایی-امریکایی است که برای دیدار با خانواده نامزدش، رز به خانه شان سفر می کند. همه چیز خوب به نظر می رسید اما …
