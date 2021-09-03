@@ -420,10 +420,11 @@ export const PostFullTitle = styled.h1`
 
 const PostFullImage = styled.figure`
   margin: 25px 0 50px;
-  height: 800px;
+  height: 100%;
   background: ${colors.lightgrey} center center;
   background-size: cover;
-  border-radius: 5px;
+  border-radius: 2.4rem;
+  overflow: hidden;
 
   @media (max-width: 1170px) {
     margin: 25px -6vw 50px;
@@ -433,13 +434,13 @@ const PostFullImage = styled.figure`
     }
   }
 
-  @media (max-width: 800px) {
-    height: 400px;
-  }
-  @media (max-width: 500px) {
-    margin-bottom: 4vw;
-    height: 350px;
-  }
+  // @media (max-width: 800px) {
+  //   height: 400px;
+  // }
+  // @media (max-width: 500px) {
+  //   margin-bottom: 4vw;
+  //   height: 350px;
+  // }
 `;
 
 export const query = graphql`
