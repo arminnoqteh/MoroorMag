@@ -11,6 +11,7 @@ import styled from '@emotion/styled';
 import { colors } from '../styles/colors';
 import { PageContext } from '../templates/post';
 import { AuthorList } from './AuthorList';
+import { toPersian } from 'persian';
 
 export interface PostCardProps {
   post: PageContext;
@@ -20,10 +21,15 @@ export interface PostCardProps {
 export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
   const date = new Date(post.frontmatter.date);
   // 2018-08-20
-  const datetime = format(date, 'yyyy-MM-dd');
-  // 20 AUG 2018
-  const displayDatetime = format(date, 'dd LLL yyyy');
-
+  const persianDate = date.toLocaleDateString('fa-IR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    formatMatcher: 'basic',
+  });
+  // const datetime = format(date, 'yyyy-MM-dd');
+  // // 20 AUG 2018
+  // const displayDatetime = format(date, 'dd LLL yyyy');
   return (
     <article
       className={`post-card ${post.frontmatter.image ? '' : 'no-image'} ${
@@ -74,8 +80,9 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
               })}
             </span>
             <span className="post-card-byline-date">
-              {post.fields.readingTime.text} <span className="bull">&bull;</span>
-              <time dateTime={datetime}>{displayDatetime}</time>
+              <time>{persianDate}</time>
+              <span className="bull">&bull;</span>
+              {toPersian(Math.round(post.fields.readingTime.minutes))} دقیقه
             </span>
           </PostCardBylineContent>
         </PostCardMeta>

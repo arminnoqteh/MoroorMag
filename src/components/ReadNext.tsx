@@ -95,6 +95,9 @@ const ReadNextAside = styled.aside`
   .author-avatar {
     border-color: ${lighten('-0.05', colors.darkgrey)};
   }
+  .post-card-image {
+    height: 30rem;
+  }
   .author-profile-image {
     background: ${lighten('-0.05', colors.darkgrey)};
   }

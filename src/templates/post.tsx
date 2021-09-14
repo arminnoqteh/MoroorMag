@@ -20,6 +20,7 @@ import { colors } from '../styles/colors';
 import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
+import { toPersian } from 'persian';
 
 export interface Author {
   id: string;
@@ -58,7 +59,7 @@ interface PageTemplateProps {
       };
       fields: {
         readingTime: {
-          text: string;
+          minutes: number;
         };
       };
     };
@@ -89,7 +90,7 @@ export interface PageContext {
   fields: {
     slug: string;
     readingTime: {
-      text: string;
+      minutes: number;
     };
   };
   frontmatter: {
@@ -117,10 +118,16 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   }
 
   const date = new Date(post.frontmatter.date);
-  // 2018-08-20
-  const datetime = format(date, 'yyyy-MM-dd');
-  // 20 AUG 2018
-  const displayDatetime = format(date, 'dd LLL yyyy');
+  // // 2018-08-20
+  // const datetime = format(date, 'yyyy-MM-dd');
+  // // 20 AUG 2018
+  // const displayDatetime = format(date, 'dd LLL yyyy');
+  const persianDate = date.toLocaleDateString('fa-IR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    formatMatcher: 'basic',
+  });
 
   return (
     <IndexLayout className="post-template">
@@ -214,12 +221,10 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                         ))}
                       </h4>
                       <div className="byline-meta-content">
-                        <time className="byline-meta-date" dateTime={datetime}>
-                          {displayDatetime}
-                        </time>
+                        <time className="byline-meta-date">{persianDate}</time>
+                        <span className="bull">&bull;</span>
                         <span className="byline-reading-time">
-                          <span className="bull">&bull;</span>
-                          {post.fields.readingTime.text}
+                          {toPersian(Math.round(post.fields.readingTime.minutes))} دقیقه
                         </span>
                       </div>
                     </section>
@@ -458,7 +463,7 @@ export const query = graphql`
       excerpt
       fields {
         readingTime {
-          text
+          minutes
         }
       }
       frontmatter {
@@ -505,7 +510,7 @@ export const query = graphql`
           }
           fields {
             readingTime {
-              text
+              minutes
             }
             slug
           }

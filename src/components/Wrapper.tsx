@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { toPersian } from 'persian';
 
 interface WrapperProps {
   className?: string;
@@ -14,4 +15,3 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `;
-
