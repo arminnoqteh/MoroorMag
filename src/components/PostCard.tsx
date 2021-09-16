@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import _ from 'lodash';
 import { lighten } from 'polished';
@@ -81,7 +81,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
             </span>
             <span className="post-card-byline-date">
               <time>{persianDate}</time>
-              <span className="bull">&bull;</span>
+              <span className="bull"> &bull; </span>
               {toPersian(Math.round(post.fields.readingTime.minutes))} دقیقه
             </span>
           </PostCardBylineContent>
